@@ -1,0 +1,121 @@
+:root{
+    --text-color:"#404553";
+    --lightgray-color:"#f3f3f354"
+}
+body{
+    margin: 0;
+font-family: 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif !important; 
+}
+.ContainerNavbar{
+    width: 100%;
+    display: flex;
+    height: 65px;
+    background-color: #fff311;
+    gap: 10px;
+    align-items: center;
+}
+.SmallCon{
+    max-width: 1920px;
+}
+
+.imgNoon{
+    height: 24px;
+    cursor: pointer;
+}
+
+.divSearchBar{
+    flex: 1 1 1%;
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+.Language{
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.SignIn{
+    width: 100px;
+}
+.Cart{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.Noon{
+    cursor: pointer;
+    width: 125px;
+}
+.ButtonCont,.CartCont,.SignIn,.Noon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtonCont{
+    background-color: transparent;
+    border: none;
+}
+.ButtonCont img{
+    width: 20px;
+    height: 17px;
+}
+p{
+    margin: 0;
+}
+.ButtonCont,.CartCont{
+    gap: 5px;
+}
+.search-input{
+    width: 100%;
+    height: 45px;
+    padding: 12px;
+    border: 0px;
+    box-sizing: border-box;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 16px;}
+    .search-input:focus{
+        outline: none;
+    }
+
+    .CartCont{     text-decoration: none;
+        text-decoration: none;
+        /* font-size: 1.08rem; */
+        /* font-weight: bold; */
+        color: var(--text-color);}
+
+        .AllDivOfBtns{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .DivBtn{
+            width: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .BTN{
+            width: 100%;
+            height: 40px;
+            cursor: pointer;
+            border: none;
+            background-color: var(--lightgray-color);
+            transition: 0.5s;  
+
+        }
+        .BTN:hover{
+            background-color: white;
+        }
+        .SearchIcon{
+            height: 100%;
+            background: white;
+            width: 20px;
+            padding: 5px;
+            cursor: pointer;
+        }

@@ -1,0 +1,106 @@
+.AllCardContainer {
+    width: 250px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f3f3b0;
+}
+
+.ImgDiv {
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+
+}
+
+.ImgDiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.TitleOfCard {
+    max-height: 55px;
+    overflow: auto;
+    color: rgb(64, 69, 83);
+}
+
+.ContContentOfCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* height: 100%; */
+    flex: 1;
+    padding: 5px;
+}
+
+.QuantityWithButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid gray;
+    width: 100px;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.ConIconPlusDel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.delete,.add{
+    transition: 0.5s;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+.delete:hover{
+    color: red; 
+}
+.ConIconPlusDel svg{
+    cursor: pointer;
+}
+.QuantityWithButtons button{
+    border: none;
+    background-color: darkgrey;
+    height: 100%;
+    width: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.PriceBigDiv1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    height: 100%;
+    justify-content: space-evenly;
+}
+.ContContentOfCard1{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    height: 100%;
+    flex: 1 1;
+    padding: 5px;
+}
+.btnClear{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid red;
+    background-color: transparent;
+    color: red;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btnClear:hover{
+    color: white;
+    background-color: red;
+
+}

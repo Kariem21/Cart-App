@@ -1,0 +1,16 @@
+.CategoryName{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 30px;
+
+}
+.productsOfCategory{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+    gap: 20px;
+}
