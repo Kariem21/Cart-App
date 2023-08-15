@@ -5,13 +5,10 @@ import ProductCard from "./ProductCard";
 import "./CSS/ProductsOfSpecificCategory.css"
 import Navbar from "./Navbar";
 import Categories from "./Components/Categories";
-import { addToCart } from "./Components/Slices/CartSlice";
 
 const ProductsOfSpecificCategory = () => {
     const [productsOfCategory, setProductsofCategory] = useState([]);
-const nav = useNavigate();
     const location = useLocation();
-    // const products = location?.state?.products;
     const category = location?.state?.category;
     const categories = location?.state?.categories;
 
