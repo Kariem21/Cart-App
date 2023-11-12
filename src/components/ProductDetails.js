@@ -15,7 +15,7 @@ const ProductDetails = () => {
     const [images, setImages] = useState([]);
     const [selectedimage, setSelectedetImage] = useState('');
     useEffect(() => {
-        if (images.length > 0) {
+        if (images?.length > 0) {
             setSelectedetImage(images[0]);
         }
     }, [images]);
@@ -51,7 +51,7 @@ const ProductDetails = () => {
                 <div className="ImagesContainer">
                     <div className="DivImageGroup">
                         {
-                            images.map((image, index) => (
+                            images?.map((image, index) => (
                                 <img
                                     style={{
                                         border: selectedimage === image ? "1px solid blue" : "none"
@@ -70,21 +70,21 @@ const ProductDetails = () => {
 
                 </div>
                 <div className="ConAllData">
-                    <div className="brand">{product.brand}</div>
-                    <div className="Title"> {product.title}</div>
-                    <div className="Category"> {product.category}</div>
-                    <div className="Rating">{product.rating} <BiSolidStar /></div>
+                    <div className="brand">{product?.brand}</div>
+                    <div className="Title"> {product?.title}</div>
+                    <div className="Category"> {product?.category}</div>
+                    <div className="Rating">{product?.rating} <BiSolidStar /></div>
                     <div className="PriceBigDiv">
                         <div className="divOldPriceStyle">Was: <span className="OldPriceStyle">{roundedPrice}$</span></div>
-                        <div className="divNewPriceStyle">Now: <span className="NewPriceStyle">{product.price}$</span></div>
-                        <div className="divSavingPriceStyle">Saving: <span className="SavingPriceStyle">{(roundedPrice - product.price).toFixed(2)}$</span>
-                            <div className="DivInsideSaving"><span>{product.discountPercentage}% Off</span></div></div>
+                        <div className="divNewPriceStyle">Now: <span className="NewPriceStyle">{product?.price}$</span></div>
+                        <div className="divSavingPriceStyle">Saving: <span className="SavingPriceStyle">{(roundedPrice - product?.price).toFixed(2)}$</span>
+                            <div className="DivInsideSaving"><span>{product?.discountPercentage}% Off</span></div></div>
                     </div>
                     <div className="Description">
                         <span className="Overview">
                             Overview
                         </span>
-                        <span className="DescriptionContent"> {product.description} </span>
+                        <span className="DescriptionContent"> {product?.description} </span>
 
                     </div>
 

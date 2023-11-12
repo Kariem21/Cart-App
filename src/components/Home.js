@@ -62,12 +62,22 @@ const Home = () => {
             .then((data) => setLaptops(data.products));
     }
 
-    const GetAllCategories = () => {
-
-        fetch('https://dummyjson.com/products/categories')
-            .then(res => res.json())
-            .then(data => setCategories(data));
-    }
+    const GetAllCategories = async () => {
+        try {
+          const response = await fetch('https://dummyjson.com/products/categories');
+          if (response.ok) {
+            const data = await response.json();
+            setCategories(data);
+          } else {
+            // Handle the error here, e.g., show an error message.
+            console.error('Failed to fetch categories');
+          }
+        } catch (error) {
+          // Handle network or other errors here.
+          console.error('Error:', error);
+        }
+      }
+      
     const GetAllProducts = () => {
 
         fetch('https://dummyjson.com/products')
@@ -89,8 +99,8 @@ const Home = () => {
             .then(response => response.json())
             .then(data => {
                 // Collect all images from all products
-                const allImages = data.products.reduce((acc, product) => {
-                    return [...acc, ...product.images];
+                const allImages = data?.products?.reduce((acc, product) => {
+                    return [...acc, ...product?.images];
                 }, []);
 
                 setImages(allImages);
@@ -213,7 +223,7 @@ useEffect(() => {
                     <h2>Skincare Products</h2>
 
                     <div className="AllSkincareProducts">
-                        {skincareProducts.map((product, index) => (
+                        {skincareProducts?.map((product, index) => (
                             <ProductCard product={product} key={index} addToCart={addToCart} />
                         ))}
                     </div>
@@ -223,7 +233,7 @@ useEffect(() => {
                     <h2>Furniture Products</h2>
 
                     <div className="AllSkincareProducts">
-                        {furnitureProducts.map((product, index) => (
+                        {furnitureProducts?.map((product, index) => (
                             <ProductCard product={product} key={index} addToCart={addToCart} />
                             ))}
                     </div>
@@ -233,7 +243,7 @@ useEffect(() => {
                     <h2> Women Dresses</h2>
 
                     <div className="AllSkincareProducts">
-                        { womensDressesProducts.map((product, index) => (
+                        { womensDressesProducts?.map((product, index) => (
                             <ProductCard product={product} key={index} addToCart={addToCart} />
                             ))}
                     </div>
@@ -243,7 +253,7 @@ useEffect(() => {
                     <h2> Laptops</h2>
 
                     <div className="AllSkincareProducts">
-                        { laptops.map((product, index) => (
+                        { laptops?.map((product, index) => (
                             <ProductCard product={product} key={index} addToCart={addToCart} />
                             ))}
                     </div>
@@ -253,7 +263,7 @@ useEffect(() => {
                     <h2> Men Shirts</h2>
 
                     <div className="AllSkincareProducts">
-                        { mensShirts.map((product, index) => (
+                        { mensShirts?.map((product, index) => (
                             <ProductCard product={product} key={index} addToCart={addToCart} />
                             ))}
                     </div>

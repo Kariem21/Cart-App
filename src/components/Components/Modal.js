@@ -8,11 +8,11 @@ const Modal = (props) => {
     const { onClose, load, searchData } = props;
 
     // Show loader if data is loading (load is false)
-    if (!load) {
-        return (
-            <img alt="wait" src={loader} />
-        );
-    }
+    // if (!load) {
+    //     return (
+    //         <img alt="wait" src={loader} />
+    //     );
+    // }
 
     // Show products if data is available
     return (

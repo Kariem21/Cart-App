@@ -13,7 +13,10 @@ const MainCart = ({ setShow,setCart }) => {
 const dispatch = useDispatch();
 const Carts = useSelector(state=>state.cart);
 
-const totlaPrice = Carts.reduce((acc,product)=> {acc+=product.price * product.quantity;return acc},0)
+const totlaPrice = Carts.reduce((acc, product) => {
+  acc += product.price * product.quantity;
+  return acc;
+}, 0);
   return (
     <>
     <Navbar/>
